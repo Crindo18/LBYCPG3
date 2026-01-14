@@ -1,0 +1,309 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML Basics Reference</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+            background: #f5f5f5;
+        }
+        h1 {
+            color: #2c3e50;
+            text-align: center;
+            margin-bottom: 30px;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            background: white;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            margin-bottom: 20px;
+        }
+        th {
+            background: #3498db;
+            color: white;
+            padding: 15px;
+            text-align: left;
+            font-weight: 600;
+        }
+        td {
+            padding: 15px;
+            border-bottom: 1px solid #e0e0e0;
+            vertical-align: top;
+        }
+        tr:hover {
+            background: #f8f9fa;
+        }
+        .topic {
+            font-weight: bold;
+            color: #2c3e50;
+            width: 20%;
+        }
+        .code {
+            background: #f4f4f4;
+            padding: 10px;
+            border-left: 3px solid #3498db;
+            font-family: 'Courier New', monospace;
+            font-size: 13px;
+            overflow-x: auto;
+            white-space: pre-wrap;
+        }
+        .output {
+            background: #e8f5e9;
+            padding: 10px;
+            border-left: 3px solid #4caf50;
+            min-height: 40px;
+        }
+        .output img {
+            max-width: 100px;
+            height: auto;
+        }
+        .output table {
+            margin: 0;
+            box-shadow: none;
+        }
+        .output table td {
+            padding: 5px 10px;
+        }
+    </style>
+</head>
+<body>
+    <h1>HTML Basic Elements - Quick Reference</h1>
+    
+    <table>
+        <thead>
+            <tr>
+                <th>Topic</th>
+                <th>HTML Code</th>
+                <th>Output/Result</th>
+            </tr>
+        </thead>
+        <tbody>
+            <!-- Basic Formatting Tags -->
+            <tr>
+                <td class="topic">1.1 Basic Formatting Tags</td>
+                <td>
+                    <div class="code">&lt;h1&gt;Main Heading&lt;/h1&gt;
+&lt;h2&gt;Sub Heading&lt;/h2&gt;
+&lt;p&gt;This is a &lt;b&gt;bold&lt;/b&gt; text.&lt;/p&gt;
+&lt;p&gt;This is &lt;i&gt;italic&lt;/i&gt; text.&lt;/p&gt;
+&lt;p&gt;This is &lt;u&gt;underlined&lt;/u&gt; text.&lt;/p&gt;
+&lt;p&gt;This is &lt;strong&gt;important&lt;/strong&gt; text.&lt;/p&gt;
+&lt;p&gt;This is &lt;em&gt;emphasized&lt;/em&gt; text.&lt;/p&gt;
+&lt;p&gt;Line 1&lt;br&gt;Line 2&lt;/p&gt;</div>
+                </td>
+                <td class="output">
+                    <h1 style="margin:5px 0;">Main Heading</h1>
+                    <h2 style="margin:5px 0;">Sub Heading</h2>
+                    <p>This is a <b>bold</b> text.</p>
+                    <p>This is <i>italic</i> text.</p>
+                    <p>This is <u>underlined</u> text.</p>
+                    <p>This is <strong>important</strong> text.</p>
+                    <p>This is <em>emphasized</em> text.</p>
+                    <p>Line 1<br>Line 2</p>
+                </td>
+            </tr>
+
+            <!-- Div and Span -->
+            <tr>
+                <td class="topic">1.2 Grouping using Div & Span</td>
+                <td>
+                    <div class="code">&lt;div style="background:#e3f2fd; padding:10px;"&gt;
+  &lt;h3&gt;Section Title&lt;/h3&gt;
+  &lt;p&gt;This is grouped content.&lt;/p&gt;
+&lt;/div&gt;
+
+&lt;p&gt;This is &lt;span style="color:red;"&gt;red&lt;/span&gt; text.&lt;/p&gt;</div>
+                </td>
+                <td class="output">
+                    <div style="background:#e3f2fd; padding:10px; margin-bottom:10px;">
+                        <h3 style="margin:5px 0;">Section Title</h3>
+                        <p style="margin:5px 0;">This is grouped content.</p>
+                    </div>
+                    <p>This is <span style="color:red;">red</span> text.</p>
+                </td>
+            </tr>
+
+            <!-- Lists -->
+            <tr>
+                <td class="topic">1.3 Lists</td>
+                <td>
+                    <div class="code">&lt;!-- Unordered List --&gt;
+&lt;ul&gt;
+  &lt;li&gt;Apple&lt;/li&gt;
+  &lt;li&gt;Banana&lt;/li&gt;
+  &lt;li&gt;Orange&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;!-- Ordered List --&gt;
+&lt;ol&gt;
+  &lt;li&gt;First&lt;/li&gt;
+  &lt;li&gt;Second&lt;/li&gt;
+  &lt;li&gt;Third&lt;/li&gt;
+&lt;/ol&gt;</div>
+                </td>
+                <td class="output">
+                    <strong>Unordered:</strong>
+                    <ul>
+                        <li>Apple</li>
+                        <li>Banana</li>
+                        <li>Orange</li>
+                    </ul>
+                    <strong>Ordered:</strong>
+                    <ol>
+                        <li>First</li>
+                        <li>Second</li>
+                        <li>Third</li>
+                    </ol>
+                </td>
+            </tr>
+
+            <!-- Images -->
+            <tr>
+                <td class="topic">1.4 Images</td>
+                <td>
+                    <div class="code">&lt;img src="image.jpg" 
+     alt="Description" 
+     width="200" 
+     height="150"&gt;
+
+&lt;!-- With link --&gt;
+&lt;a href="page.html"&gt;
+  &lt;img src="logo.png" alt="Logo"&gt;
+&lt;/a&gt;</div>
+                </td>
+                <td class="output">
+                    <div style="background:#ddd; width:150px; height:100px; display:flex; align-items:center; justify-content:center; border:1px solid #999;">
+                        [Image Placeholder]
+                    </div>
+                    <p style="font-size:12px; color:#666; margin-top:5px;">Note: Replace src with actual image path</p>
+                </td>
+            </tr>
+
+            <!-- Tables -->
+            <tr>
+                <td class="topic">1.5 Tables</td>
+                <td>
+                    <div class="code">&lt;table border="1"&gt;
+  &lt;tr&gt;
+    &lt;th&gt;Name&lt;/th&gt;
+    &lt;th&gt;Age&lt;/th&gt;
+    &lt;th&gt;City&lt;/th&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+    &lt;td&gt;John&lt;/td&gt;
+    &lt;td&gt;25&lt;/td&gt;
+    &lt;td&gt;New York&lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+    &lt;td&gt;Sarah&lt;/td&gt;
+    &lt;td&gt;30&lt;/td&gt;
+    &lt;td&gt;London&lt;/td&gt;
+  &lt;/tr&gt;
+&lt;/table&gt;</div>
+                </td>
+                <td class="output">
+                    <table border="1" style="border-collapse:collapse;">
+                        <tr>
+                            <th style="background:#3498db; color:white; padding:8px;">Name</th>
+                            <th style="background:#3498db; color:white; padding:8px;">Age</th>
+                            <th style="background:#3498db; color:white; padding:8px;">City</th>
+                        </tr>
+                        <tr>
+                            <td style="padding:8px;">John</td>
+                            <td style="padding:8px;">25</td>
+                            <td style="padding:8px;">New York</td>
+                        </tr>
+                        <tr>
+                            <td style="padding:8px;">Sarah</td>
+                            <td style="padding:8px;">30</td>
+                            <td style="padding:8px;">London</td>
+                        </tr>
+                    </table>
+                </td>
+            </tr>
+
+            <!-- Hyperlinks -->
+            <tr>
+                <td class="topic">1.6 Hyperlinks</td>
+                <td>
+                    <div class="code">&lt;!-- External link --&gt;
+&lt;a href="https://www.google.com"&gt;Google&lt;/a&gt;
+
+&lt;!-- Internal link --&gt;
+&lt;a href="about.html"&gt;About Us&lt;/a&gt;
+
+&lt;!-- Email link --&gt;
+&lt;a href="mailto:info@example.com"&gt;Email Us&lt;/a&gt;
+
+&lt;!-- New tab --&gt;
+&lt;a href="https://google.com" target="_blank"&gt;
+  Open in New Tab
+&lt;/a&gt;</div>
+                </td>
+                <td class="output">
+                    <a href="https://www.google.com" style="display:block; margin:5px 0;">Google</a>
+                    <a href="#" style="display:block; margin:5px 0;">About Us</a>
+                    <a href="mailto:info@example.com" style="display:block; margin:5px 0;">Email Us</a>
+                    <a href="https://google.com" target="_blank" style="display:block; margin:5px 0;">Open in New Tab</a>
+                </td>
+            </tr>
+
+            <!-- Frames and Forms -->
+            <tr>
+                <td class="topic">1.7 Frames & Forms</td>
+                <td>
+                    <div class="code">&lt;!-- iFrame --&gt;
+&lt;iframe src="page.html" 
+        width="300" 
+        height="200"&gt;&lt;/iframe&gt;
+
+&lt;!-- Form --&gt;
+&lt;form action="submit.php" method="post"&gt;
+  &lt;label&gt;Name:&lt;/label&gt;
+  &lt;input type="text" name="name"&gt;&lt;br&gt;
+  
+  &lt;label&gt;Email:&lt;/label&gt;
+  &lt;input type="email" name="email"&gt;&lt;br&gt;
+  
+  &lt;label&gt;Message:&lt;/label&gt;
+  &lt;textarea name="message"&gt;&lt;/textarea&gt;&lt;br&gt;
+  
+  &lt;input type="submit" value="Send"&gt;
+&lt;/form&gt;</div>
+                </td>
+                <td class="output">
+                    <strong>Form Example:</strong>
+                    <form style="margin-top:10px;">
+                        <label>Name:</label><br>
+                        <input type="text" name="name" style="margin:5px 0; padding:5px;"><br>
+                        
+                        <label>Email:</label><br>
+                        <input type="email" name="email" style="margin:5px 0; padding:5px;"><br>
+                        
+                        <label>Message:</label><br>
+                        <textarea name="message" style="margin:5px 0; padding:5px;" rows="3"></textarea><br>
+                        
+                        <input type="submit" value="Send" style="margin-top:5px; padding:5px 15px; background:#3498db; color:white; border:none; cursor:pointer;">
+                    </form>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+
+    <div style="background:white; padding:20px; margin-top:20px; border-radius:5px; box-shadow:0 2px 10px rgba(0,0,0,0.1);">
+        <h3 style="color:#2c3e50; margin-top:0;">Quick Notes:</h3>
+        <ul>
+            <li><strong>Frames:</strong> The &lt;frame&gt; tag is deprecated. Use &lt;iframe&gt; instead for embedding content.</li>
+            <li><strong>Forms:</strong> Always include proper <code>action</code> and <code>method</code> attributes.</li>
+            <li><strong>Images:</strong> Always provide an <code>alt</code> attribute for accessibility.</li>
+            <li><strong>Tables:</strong> Use CSS for styling instead of deprecated attributes like <code>border</code>.</li>
+        </ul>
+    </div>
+</body>
+</html>
