@@ -3,62 +3,192 @@
 <head>
   <title>Experience</title>
   <style>
+    /* BASE SETTINGS */
     body { 
-      font-family: 'Segoe UI', sans-serif; 
+      font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; 
       margin: 0; 
-      padding: 0;
-      background-image: url('assets/background.jpg'); 
-      background-size: cover;
-      background-attachment: fixed;
-      background-position: center;
+      padding: 0; 
+      background-color: #f9f9f9; /* Very light grey background */
+      color: #333;
     }
+
     .overlay {
-      background-color: rgba(255, 255, 255, 0.92);
       min-height: 100vh;
-      padding: 40px;
-      box-sizing: border-box;
       display: flex;
       flex-direction: column;
       align-items: center;
+      padding: 60px 40px;
+      box-sizing: border-box;
     }
-    .container { max-width: 800px; width: 100%; }
+
     h1 { 
-      text-align:center; 
-      border-bottom: 3px solid #0090D0; 
-      padding-bottom: 15px; 
       color: #1A2B45; 
+      font-size: 42px;
+      text-transform: uppercase; 
+      letter-spacing: 2px;
+      margin-bottom: 60px;
+      text-align: center;
+      font-weight: 800;
+    }
+
+    /* GRID CONTAINER */
+    .experience-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr); /* 2 Columns */
+      gap: 30px;
+      max-width: 1000px;
+      width: 100%;
+    }
+
+    /* THE CARD */
+    .exp-card {
+      background-color: #fff;
+      border: 1px solid #e0e0e0;
+      border-radius: 12px;
+      padding: 40px;
+      position: relative;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between; /* Pushes link to bottom */
+      min-height: 250px; /* Uniform height */
+      transition: all 0.3s ease;
+      cursor: default;
+    }
+
+    .exp-card:hover {
+      box-shadow: 0 10px 25px rgba(0,0,0,0.08);
+      border-color: #0090D0; /* Highlight border on hover */
+      transform: translateY(-5px);
+    }
+
+    /* CARD HEADER (Title + Icon) */
+    .card-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+      margin-bottom: 20px;
+    }
+
+    .card-header h2 {
+      font-size: 24px;
+      font-weight: 700;
+      margin: 0;
+      color: #1A2B45;
+      max-width: 80%;
+    }
+
+    .card-icon {
+      font-size: 28px;
+      color: #555;
+    }
+
+    /* CARD BODY */
+    .card-body p {
+      font-size: 16px;
+      line-height: 1.6;
+      color: #555;
+      margin: 0 0 30px 0;
+    }
+
+    .date-badge {
+      display: inline-block;
+      font-size: 12px;
+      font-weight: 700;
       text-transform: uppercase;
-      margin-bottom: 40px;
+      letter-spacing: 1px;
+      color: #0090D0;
+      margin-bottom: 15px;
     }
-    .job { 
-      margin-bottom: 30px; 
-      border-left: 5px solid #1A2B45; /* Dark Line */
-      padding-left: 25px; 
-      background: rgba(255,255,255,0.8); 
-      padding: 20px 20px 20px 25px;
-      border-radius: 0 8px 8px 0;
+
+    /* CARD FOOTER (Link) */
+    .card-footer a {
+      text-decoration: none;
+      color: #1A2B45;
+      font-weight: 700;
+      font-size: 14px;
+      border-bottom: 2px solid #1A2B45;
+      padding-bottom: 2px;
+      transition: all 0.2s;
     }
-    h2 { margin-top: 0; margin-bottom: 5px; color: #1A2B45; }
-    .date { color: #0090D0; font-weight: bold; font-style: italic; margin-bottom: 10px; display: block;}
-    p { color: #455a64; }
+
+    .card-footer a:hover {
+      color: #0090D0;
+      border-color: #0090D0;
+    }
+
   </style>
 </head>
 <body>
   <div class="overlay">
-    <div class="container">
-      <h1>Experience</h1>
-      
-      <div class="job">
-        <h2>IT Intern (Fictional)</h2>
-        <span class="date">Tech Solutions Inc. | June 2024 - August 2024</span>
-        <p>Assisted the network administrator in server maintenance and troubleshooting hardware issues for over 50 employee workstations.</p>
+    <h1>Professional Experience</h1>
+    
+    <div class="experience-grid">
+
+      <div class="exp-card">
+        <div class="card-header">
+          <h2>ACCESS Organization</h2>
+          <span class="card-icon">👥</span>
+        </div>
+        <div class="card-body">
+          <span class="date-badge">2023 - Present</span>
+          <p>
+            Active member of the academic organization for Computer Engineering. 
+            Collaborated on technical workshops and peer-mentoring sessions for lower-batch students.
+          </p>
+        </div>
+        <div class="card-footer">
+          <a href="#">View Details</a>
+        </div>
       </div>
 
-      <div class="job">
-        <h2>Laboratory Assistant</h2>
-        <span class="date">University Computer Lab | Jan 2024 - May 2024</span>
-        <p>Managed computer usage logs, ensured software was up to date, and assisted students with basic programming inquiries.</p>
+      <div class="exp-card">
+        <div class="card-header">
+          <h2>IT Intern (Fictional)</h2>
+          <span class="card-icon">💼</span>
+        </div>
+        <div class="card-body">
+          <span class="date-badge">June 2024 - Aug 2024</span>
+          <p>
+            Assisted the network administrator at Tech Solutions Inc. in server maintenance, hardware troubleshooting, and workstation setup for new employees.
+          </p>
+        </div>
+        <div class="card-footer">
+          <a href="#">View Details</a>
+        </div>
       </div>
+
+      <div class="exp-card">
+        <div class="card-header">
+          <h2>Laboratory Assistant</h2>
+          <span class="card-icon">🔬</span>
+        </div>
+        <div class="card-body">
+          <span class="date-badge">Jan 2024 - May 2024</span>
+          <p>
+            Managed computer usage logs at the University Computer Lab. Ensured software was up to date and assisted students with basic C++ programming errors.
+          </p>
+        </div>
+        <div class="card-footer">
+          <a href="#">View Details</a>
+        </div>
+      </div>
+
+      <div class="exp-card">
+        <div class="card-header">
+          <h2>Freelance Technician</h2>
+          <span class="card-icon">🛠️</span>
+        </div>
+        <div class="card-body">
+          <span class="date-badge">2022 - Present</span>
+          <p>
+            Provided hardware repair and software installation services for local clients. Specialized in custom PC builds and home network configuration.
+          </p>
+        </div>
+        <div class="card-footer">
+          <a href="#">View Details</a>
+        </div>
+      </div>
+
     </div>
   </div>
 </body>
