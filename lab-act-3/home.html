@@ -5,10 +5,21 @@
   <style>
     body {
       font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
-      background-color: #ffffff;
-      color: #111;
       margin: 0;
       padding: 0;
+      
+      background-image: url('assets/background.jpg'); 
+      background-size: cover;
+      background-position: center;
+      background-attachment: fixed;
+      color: #333;
+    }
+
+
+    .overlay {
+      background-color: rgba(255, 255, 255, 0.85);
+      min-height: 100vh;
+      width: 100%;
     }
 
     .main-container {
@@ -19,7 +30,7 @@
       padding: 0 5%;
     }
 
-    /* LEFT: TEXT CONTENT */
+
     .main-text {
       flex: 1;
       padding-right: 50px;
@@ -31,7 +42,7 @@
       margin: 0;
       text-transform: uppercase;
       letter-spacing: -2px;
-      color: #111;
+      color: #0056b3;
     }
 
     .description {
@@ -39,10 +50,11 @@
       font-size: 18px;
       line-height: 1.6;
       color: #555;
+      font-weight: 500;
       max-width: 500px;
     }
 
-   
+  
     .main-image {
       flex: 1;
       display: flex;
@@ -53,21 +65,23 @@
       width: 100%;
       max-width: 450px;
       height: auto;
-      border-radius: 50%; /* Slight rounded corner */
+      border-radius: 50%; 
       object-fit: cover;
-      box-shadow: 20px 20px 0px #414141; /* Decorative shadow block */
-      border: 5px solid #585858;
+      box-shadow: 20px 20px 0px rgba(0, 123, 255, 0.2); 
+      border: 5px solid #007BFF;
     }
 
-  
+    
     .contact-section {
-      background-color: #f9f9f9;
+      background-color: rgba(240, 248, 255, 0.9);
       padding: 60px 5%;
       margin-top: 50px;
+      
     }
 
     .contact-section h2 {
       font-size: 24px;
+      color: #0056b3;
       text-transform: uppercase;
       margin-bottom: 30px;
     }
@@ -80,14 +94,19 @@
       width: 100%;
       padding: 15px;
       margin-bottom: 15px;
-      border: 1px solid #ddd;
+      border: 1px solid #b3d7ff; /* Light Blue Border */
       background: #fff;
       font-family: inherit;
       box-sizing: border-box;
     }
 
+    input[type=text]:focus, input[type=email]:focus, textarea:focus {
+      border-color: #007BFF;
+      outline: none;
+    }
+
     input[type=submit] {
-      background-color: #000;
+      background-color: #007BFF; /* Blue Button */
       color: #fff;
       border: none;
       padding: 15px 30px;
@@ -99,38 +118,38 @@
     }
 
     input[type=submit]:hover {
-      background-color: #333;
+      background-color: #0056b3; /* Darker Blue on Hover */
     }
 
   </style>
 </head>
 <body>
+  <div class="overlay">
+    <div class="main-container">
+      
+      <div class="main-text">
+        <h1>Christian<br>John<br>Alado</h1>
+        <p class="description">
+          Computer Engineering Student at DLSU. <br>
+          Passionate about hardware, software, and design.
+        </p>
+      </div>
 
-  <div class="main-container">
-    
-    <div class="main-text">
-      <h1>Christian<br>John<br>Alado</h1>
-      <p class="description">
-        Computer Engineering Student at DLSU. <br>
-        Passionate about hardware, software, and design.
-      </p>
+      <div class="main-image">
+        <img src="assets/profile.jpg" alt="Profile">
+      </div>
+
     </div>
 
-    <div class="main-image">
-      <img src="assets/profile.jpg" >
+    <div class="contact-section">
+      <h2>Get in Touch</h2>
+      <form action="mailto:your.email@example.com" method="post" enctype="text/plain">
+        <input type="text" name="name" placeholder="YOUR NAME">
+        <input type="email" name="email" placeholder="YOUR EMAIL">
+        <textarea name="message" rows="5" placeholder="TELL ME ABOUT YOUR PROJECT" ></textarea>
+        <input type="submit" value="Send Message">
+      </form>
     </div>
-
   </div>
-
-  <div class="contact-section">
-    <h2>Get in Touch</h2>
-    <form action="mailto:your.email@example.com" method="post" enctype="text/plain">
-      <input type="text" name="name" placeholder="YOUR NAME">
-      <input type="email" name="email" placeholder="YOUR EMAIL">
-      <textarea name="message" rows="5" placeholder="TELL ME ABOUT YOUR PROJECT" ></textarea>
-      <input type="submit" value="Send Message">
-    </form>
-  </div>
-
 </body>
 </html>
