@@ -4,65 +4,133 @@
   <title>Home</title>
   <style>
     body {
-      font-family: 'Segoe UI', sans-serif;
-      background-color: #f4f4f4;
-      text-align: center;
-      padding: 50px;
+      font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+      background-color: #ffffff;
+      color: #111;
+      margin: 0;
+      padding: 0;
     }
-    h1 { color: #333; }
-    .container {
-      background: white;
+
+    .main-container {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 85vh;
+      padding: 0 5%;
+    }
+
+    /* LEFT: TEXT CONTENT */
+    .main-text {
+      flex: 1;
+      padding-right: 50px;
+    }
+
+    h1 {
+      font-size: 80px; 
+      line-height: 0.9;
+      margin: 0;
+      text-transform: uppercase;
+      letter-spacing: -2px;
+      color: #111;
+    }
+
+    .description {
+      margin-top: 30px;
+      font-size: 18px;
+      line-height: 1.6;
+      color: #555;
+      max-width: 500px;
+    }
+
+   
+    .main-image {
+      flex: 1;
+      display: flex;
+      justify-content: center;
+    }
+
+    .main-image img {
+      width: 100%;
+      max-width: 450px;
+      height: auto;
+      border-radius: 50%; /* Slight rounded corner */
+      object-fit: cover;
+      box-shadow: 20px 20px 0px #414141; /* Decorative shadow block */
+      border: 5px solid #585858;
+    }
+
+  
+    .contact-section {
+      background-color: #f9f9f9;
+      padding: 60px 5%;
+      margin-top: 50px;
+    }
+
+    .contact-section h2 {
+      font-size: 24px;
+      text-transform: uppercase;
+      margin-bottom: 30px;
+    }
+
+    form {
       max-width: 600px;
-      margin: auto;
-      padding: 30px;
-      border-radius: 8px;
-      box-shadow: 0 0 10px rgba(0,0,0,0.1);
     }
 
     input[type=text], input[type=email], textarea {
       width: 100%;
-      padding: 12px;
-      margin: 8px 0;
-      display: inline-block;
-      border: 1px solid #ccc;
-      border-radius: 4px;
+      padding: 15px;
+      margin-bottom: 15px;
+      border: 1px solid #ddd;
+      background: #fff;
+      font-family: inherit;
       box-sizing: border-box;
     }
+
     input[type=submit] {
-      width: 100%;
-      background-color: #4CAF50;
-      color: white;
-      padding: 14px 20px;
-      margin: 8px 0;
+      background-color: #000;
+      color: #fff;
       border: none;
-      border-radius: 4px;
+      padding: 15px 30px;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      font-weight: bold;
       cursor: pointer;
+      transition: background 0.3s;
     }
+
     input[type=submit]:hover {
-      background-color: #45a049;
+      background-color: #333;
     }
+
   </style>
 </head>
 <body>
-  <div class="container">
-    <h1>Welcome to My Portfolio</h1>
-    <p>Explore my works, experience, and educational background using the menu above.</p>
+
+  <div class="main-container">
     
-    <hr style="margin: 30px 0; border: 0; border-top: 1px solid #eee;">
+    <div class="main-text">
+      <h1>Christian<br>John<br>Alado</h1>
+      <p class="description">
+        Computer Engineering Student at DLSU. <br>
+        Passionate about hardware, software, and design.
+      </p>
+    </div>
 
-    <h2>Contact Me</h2>
+    <div class="main-image">
+      <img src="assets/profile.jpg" >
+    </div>
+
+  </div>
+
+  <div class="contact-section">
+    <h2>Get in Touch</h2>
     <form action="mailto:your.email@example.com" method="post" enctype="text/plain">
-      <label for="fname" style="float:left">Name</label>
-      <input type="text" id="fname" name="firstname" placeholder="Your name..">
-
-      <label for="email" style="float:left">Email</label>
-      <input type="email" id="email" name="email" placeholder="Your email..">
-
-      <label for="subject" style="float:left">Message</label>
-      <textarea id="subject" name="subject" placeholder="Write something.." style="height:100px"></textarea>
-
+      <input type="text" name="name" placeholder="YOUR NAME">
+      <input type="email" name="email" placeholder="YOUR EMAIL">
+      <textarea name="message" rows="5" placeholder="TELL ME ABOUT YOUR PROJECT" ></textarea>
       <input type="submit" value="Send Message">
     </form>
   </div>
+
 </body>
 </html>
