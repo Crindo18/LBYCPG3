@@ -8,7 +8,6 @@
       font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
       margin: 0;
       padding: 0;
-      /* Background setup matches Home page */
       background-image: url('assets/background.jpg'); 
       background-size: cover;
       background-attachment: fixed;
@@ -18,7 +17,7 @@
 
     /* Full Screen Overlay */
     .overlay {
-      background-color: rgba(255, 255, 255, 0.94);
+      background-color: rgba(255, 255, 255, 0.95); /* Slightly higher opacity */
       min-height: 100vh;
       display: flex;
       align-items: center;
@@ -32,12 +31,12 @@
       display: flex;
       align-items: center;
       justify-content: center;
-      max-width: 1000px;
-      gap: 60px; /* Space between text and image */
-      text-align: left; /* Align text to the left */
+      max-width: 1100px; /* Increased max-width slightly */
+      gap: 80px; /* Increased gap */
+      text-align: left;
     }
 
-    /* RIGHT SIDE: IMAGE */
+    /* RIGHT SIDE: IMAGE (New Shape) */
     .image-wrapper {
       flex: 1;
       display: flex;
@@ -45,50 +44,55 @@
     }
 
     .profile-img {
-      width: 350px; /* Enlarged Size */
-      height: 350px;
-      border-radius: 50%;
+      width: 400px; /* Slightly larger */
+      height: 400px;
+      /* NEW SHAPE: Rounded Square instead of circle */
+      border-radius: 30px; 
       object-fit: cover;
-      /* Hytale Cyan Border with Shadow */
+      /* Hytale Cyan heavy border */
       border: 8px solid #0090D0; 
-      box-shadow: 20px 20px 0 rgba(26, 43, 69, 0.15); /* Offset shadow */
+      /* Offset block shadow */
+      box-shadow: 25px 25px 0 rgba(26, 43, 69, 0.2); 
     }
 
-    /* LEFT SIDE: DETAILS */
+    /* LEFT SIDE: DETAILS (Larger Typography) */
     .details-wrapper {
-      flex: 1.2; /* Takes slightly more space than image */
+      flex: 1.3; 
     }
 
     h1 {
       color: #1A2B45; /* Deep Navy */
-      font-size: 56px; /* Enlarged Title */
-      line-height: 1.1;
+      font-size: 64px; /* Single line, larger font */
+      line-height: 1;
       text-transform: uppercase;
-      letter-spacing: 2px;
-      margin: 0 0 10px 0;
+      font-weight: 800;
+      letter-spacing: 1px;
+      margin: 0 0 20px 0;
+      white-space: nowrap; /* Ensures it stays on one line if screen allows */
     }
 
     .subtitle {
       color: #0090D0; /* Cyan Accent */
       font-weight: 700;
-      font-size: 20px;
+      font-size: 24px; /* Larger subtitle */
       text-transform: uppercase;
-      letter-spacing: 1px;
-      margin-bottom: 30px;
+      letter-spacing: 1.5px;
+      margin-bottom: 40px;
       display: block;
-      border-left: 5px solid #1A2B45;
-      padding-left: 15px;
+      border-left: 6px solid #1A2B45;
+      padding-left: 20px;
     }
 
     .bio-text {
-      font-size: 20px; /* Larger readable text */
-      line-height: 1.8;
-      color: #546e7a;
-      margin-bottom: 20px;
+      font-size: 22px; /* Larger body text */
+      line-height: 1.7;
+      color: #455a64;
+      margin-bottom: 25px;
     }
     
     .bio-text strong {
       color: #1A2B45;
+      font-weight: 700;
     }
 
   </style>
@@ -99,15 +103,14 @@
     <div class="profile-container">
       
       <div class="details-wrapper">
-        <h1>Christian<br>John Alado</h1>
-        <span class="subtitle">3rd Year • BS Computer Engineering</span>
+        <h1>Christian John Alado</h1>
+        <span class="subtitle">3rd Year • Computer Engineering</span>
         
         <p class="bio-text">
-          I am a tech enthusiast currently studying at the <strong>Gokongwei College of Engineering</strong> (DLSU-Manila). 
+          I am a dedicated technology enthusiast currently pursuing my degree at the <strong>Gokongwei College of Engineering</strong> (DLSU-Manila). 
         </p>
         <p class="bio-text">
-          As an active member of <strong>ACCESS</strong>, I enjoy collaborating on projects that bridge the gap between hardware and software.
-          My current focus lies in <strong>embedded systems</strong>, <strong>FPGA design</strong>, and <strong>network infrastructure</strong>.
+          As an active member of the <strong>ACCESS</strong> organization, I collaborate on projects bridging hardware and software. My primary focus areas include <strong>embedded systems design</strong>, <strong>FPGA development</strong>, and <strong>scalable network infrastructure</strong>.
         </p>
       </div>
 
