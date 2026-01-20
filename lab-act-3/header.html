@@ -4,7 +4,8 @@
   <style>
     body {
       margin: 0;
-      background-color: #ffffff; 
+      /* Hytale Header Background: Deep Navy */
+      background-color: #1A2B45; 
       font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;  
       overflow: hidden; 
     }
@@ -16,25 +17,21 @@
       height: 80px; 
       padding: 0 40px; 
       box-sizing: border-box;
-      border-bottom: 2px solid #e3f2fd; /* Subtle Blue Border */
+      border-bottom: 2px solid #0F1929; 
     }
 
     .logo-area {
       display: flex;
       align-items: center;
       text-decoration: none;
-      color: #0056b3; /* Darker Blue for Logo */
+      color: #ffffff; 
       font-weight: bold;
       font-size: 24px;
-      letter-spacing: 1px;
       text-transform: uppercase;
+      letter-spacing: 1px;
+      text-shadow: 0px 2px 4px rgba(0,0,0,0.5);
     }
 
-    .logo-area img {
-      height: 25px; 
-      width: auto;
-      margin-right: 8px;
-    }
 
     .nav-menu {
       display: flex;
@@ -42,17 +39,18 @@
     }
 
     .nav-menu a {
-      color: #555; /* Default grey */
+      color: #cfd8dc; /* Light Grey/Blue text */
       text-decoration: none;
       font-size: 14px;
       text-transform: uppercase;
-      font-weight: 600;
+      font-weight: 700; /* Bolder font like Hytale menu */
       letter-spacing: 0.5px;
-      transition: color 0.3s;
+      transition: all 0.3s;
     }
 
     .nav-menu a:hover {
-      color: #007BFF; /* Bright Blue on Hover */
+      color: #0090D0; /* Hytale Bright Blue on Hover */
+      text-shadow: 0 0 10px rgba(0, 144, 208, 0.5); /* Glowing effect */
     }
   </style>
 </head>
@@ -60,7 +58,7 @@
   <div class="header-container">
     
     <a href="home.html" target="winmain" class="logo-area">
-      <img src="assets/home.png"> CRINDO
+      Crindo
     </a>
 
     <div class="nav-menu">

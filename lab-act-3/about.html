@@ -3,41 +3,120 @@
 <head>
   <title>About</title>
   <style>
+    /* HYTALE THEME BASE */
     body {
-      font-family: 'Segoe UI', sans-serif;
-      padding: 40px;
-      background-color: #fff;
+      font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      /* Background setup matches Home page */
+      background-image: url('assets/background.jpg'); 
+      background-size: cover;
+      background-attachment: fixed;
+      background-position: center;
       color: #333;
-      text-align: center;
     }
-    h1 { color: #0056b3; }
+
+    /* Full Screen Overlay */
+    .overlay {
+      background-color: rgba(255, 255, 255, 0.94);
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 40px;
+      box-sizing: border-box;
+    }
+
+    /* SPLIT LAYOUT CONTAINER */
+    .profile-container {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      max-width: 1000px;
+      gap: 60px; /* Space between text and image */
+      text-align: left; /* Align text to the left */
+    }
+
+    /* RIGHT SIDE: IMAGE */
+    .image-wrapper {
+      flex: 1;
+      display: flex;
+      justify-content: center;
+    }
+
     .profile-img {
-      width: 200px;
-      height: 200px;
-      border-radius: 50%; 
+      width: 350px; /* Enlarged Size */
+      height: 350px;
+      border-radius: 50%;
       object-fit: cover;
-      border: 5px solid #007BFF; /* Blue Border */
+      /* Hytale Cyan Border with Shadow */
+      border: 8px solid #0090D0; 
+      box-shadow: 20px 20px 0 rgba(26, 43, 69, 0.15); /* Offset shadow */
+    }
+
+    /* LEFT SIDE: DETAILS */
+    .details-wrapper {
+      flex: 1.2; /* Takes slightly more space than image */
+    }
+
+    h1 {
+      color: #1A2B45; /* Deep Navy */
+      font-size: 56px; /* Enlarged Title */
+      line-height: 1.1;
+      text-transform: uppercase;
+      letter-spacing: 2px;
+      margin: 0 0 10px 0;
+    }
+
+    .subtitle {
+      color: #0090D0; /* Cyan Accent */
+      font-weight: 700;
+      font-size: 20px;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      margin-bottom: 30px;
+      display: block;
+      border-left: 5px solid #1A2B45;
+      padding-left: 15px;
+    }
+
+    .bio-text {
+      font-size: 20px; /* Larger readable text */
+      line-height: 1.8;
+      color: #546e7a;
       margin-bottom: 20px;
     }
-    .bio {
-      max-width: 700px;
-      margin: 0 auto;
-      line-height: 1.6;
-      font-size: 18px;
+    
+    .bio-text strong {
+      color: #1A2B45;
     }
+
   </style>
 </head>
 <body>
-  <h1>About Me</h1>
-  <img src="assets/profile.jpg" alt="Christian John Alado" class="profile-img">
-  
-  <div class="bio">
-    <p><strong>Hello! I am Christian John Alado.</strong></p>
-    <p>
-      I am a dedicated Computer Engineering student at De La Salle University - Manila. 
-      I have a passion for hardware configuration, software development, and network systems. 
-      This portfolio showcases my journey, projects, and the skills I have acquired during my academic career.
-    </p>
+  <div class="overlay">
+    
+    <div class="profile-container">
+      
+      <div class="details-wrapper">
+        <h1>Christian<br>John Alado</h1>
+        <span class="subtitle">3rd Year • BS Computer Engineering</span>
+        
+        <p class="bio-text">
+          I am a tech enthusiast currently studying at the <strong>Gokongwei College of Engineering</strong> (DLSU-Manila). 
+        </p>
+        <p class="bio-text">
+          As an active member of <strong>ACCESS</strong>, I enjoy collaborating on projects that bridge the gap between hardware and software.
+          My current focus lies in <strong>embedded systems</strong>, <strong>FPGA design</strong>, and <strong>network infrastructure</strong>.
+        </p>
+      </div>
+
+      <div class="image-wrapper">
+        <img src="assets/profile.jpg" alt="Christian John Alado" class="profile-img">
+      </div>
+
+    </div>
+
   </div>
 </body>
 </html>

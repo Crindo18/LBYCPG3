@@ -3,26 +3,63 @@
 <head>
   <title>Experience</title>
   <style>
-    body { font-family: 'Segoe UI', sans-serif; padding: 40px; max-width: 800px; margin: auto; }
-    h1 { text-align:center; border-bottom: 2px solid #b3d7ff; padding-bottom: 10px; color: #0056b3; }
-    .job { margin-bottom: 30px; border-left: 4px solid #007BFF; padding-left: 20px; background: #f9f9f9; padding: 15px; }
-    h2 { margin-top: 0; margin-bottom: 5px; color: #333; }
-    .date { color: #007BFF; font-weight: bold; font-style: italic; margin-bottom: 10px; display: block;}
+    body { 
+      font-family: 'Segoe UI', sans-serif; 
+      margin: 0; 
+      padding: 0;
+      background-image: url('assets/background.jpg'); 
+      background-size: cover;
+      background-attachment: fixed;
+      background-position: center;
+    }
+    .overlay {
+      background-color: rgba(255, 255, 255, 0.92);
+      min-height: 100vh;
+      padding: 40px;
+      box-sizing: border-box;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+    .container { max-width: 800px; width: 100%; }
+    h1 { 
+      text-align:center; 
+      border-bottom: 3px solid #0090D0; 
+      padding-bottom: 15px; 
+      color: #1A2B45; 
+      text-transform: uppercase;
+      margin-bottom: 40px;
+    }
+    .job { 
+      margin-bottom: 30px; 
+      border-left: 5px solid #1A2B45; /* Dark Line */
+      padding-left: 25px; 
+      background: rgba(255,255,255,0.8); 
+      padding: 20px 20px 20px 25px;
+      border-radius: 0 8px 8px 0;
+    }
+    h2 { margin-top: 0; margin-bottom: 5px; color: #1A2B45; }
+    .date { color: #0090D0; font-weight: bold; font-style: italic; margin-bottom: 10px; display: block;}
+    p { color: #455a64; }
   </style>
 </head>
 <body>
-  <h1>Experience</h1>
-  
-  <div class="job">
-    <h2>IT Intern (Fictional)</h2>
-    <span class="date">Tech Solutions Inc. | June 2024 - August 2024</span>
-    <p>Assisted the network administrator in server maintenance and troubleshooting hardware issues for over 50 employee workstations.</p>
-  </div>
+  <div class="overlay">
+    <div class="container">
+      <h1>Experience</h1>
+      
+      <div class="job">
+        <h2>IT Intern (Fictional)</h2>
+        <span class="date">Tech Solutions Inc. | June 2024 - August 2024</span>
+        <p>Assisted the network administrator in server maintenance and troubleshooting hardware issues for over 50 employee workstations.</p>
+      </div>
 
-  <div class="job">
-    <h2>Laboratory Assistant</h2>
-    <span class="date">University Computer Lab | Jan 2024 - May 2024</span>
-    <p>Managed computer usage logs, ensured software was up to date, and assisted students with basic programming inquiries.</p>
+      <div class="job">
+        <h2>Laboratory Assistant</h2>
+        <span class="date">University Computer Lab | Jan 2024 - May 2024</span>
+        <p>Managed computer usage logs, ensured software was up to date, and assisted students with basic programming inquiries.</p>
+      </div>
+    </div>
   </div>
 </body>
 </html>
