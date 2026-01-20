@@ -1,9 +1,36 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <title>Works</title>
-    <body>
-      <h1>Works</h1>
-    </body>
-  </head>
+<head>
+  <title>Works</title>
+  <style>
+    body { font-family: 'Segoe UI', sans-serif; padding: 20px; background: #f9f9f9; }
+    .gallery { display: flex; flex-wrap: wrap; justify-content: center; gap: 20px; }
+    .card {
+      background: white;
+      border-radius: 8px;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+      width: 300px;
+      padding: 20px;
+      text-align: left;
+    }
+    .card h3 { margin-top: 0; color: #4CAF50; }
+  </style>
+</head>
+<body>
+  <h1 style="text-align:center;">My Projects</h1>
+  <div class="gallery">
+    <div class="card">
+      <h3>Network Design</h3>
+      <p>Designed a local area network (LAN) for a small office environment using Cisco Packet Tracer.</p>
+    </div>
+    <div class="card">
+      <h3>Web Development</h3>
+      <p>Created a menu-driven portfolio website (this project!) using HTML frames and CSS styling.</p>
+    </div>
+    <div class="card">
+      <h3>Hardware Repair</h3>
+      <p>Performed diagnostics and RAM upgrades on laboratory desktop units.</p>
+    </div>
+  </div>
+</body>
 </html>
