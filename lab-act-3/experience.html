@@ -8,7 +8,7 @@
       font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; 
       margin: 0; 
       padding: 0; 
-      background-color: #f9f9f9; /* Very light grey background */
+      background-color: #f9f9f9; 
       color: #333;
     }
 
@@ -34,7 +34,7 @@
     /* GRID CONTAINER */
     .experience-grid {
       display: grid;
-      grid-template-columns: repeat(2, 1fr); /* 2 Columns */
+      grid-template-columns: repeat(2, 1fr); 
       gap: 30px;
       max-width: 1000px;
       width: 100%;
@@ -49,19 +49,19 @@
       position: relative;
       display: flex;
       flex-direction: column;
-      justify-content: space-between; /* Pushes link to bottom */
-      min-height: 250px; /* Uniform height */
+      /* Removed justify-content: space-between since footer is gone */
+      min-height: 200px; 
       transition: all 0.3s ease;
       cursor: default;
     }
 
     .exp-card:hover {
       box-shadow: 0 10px 25px rgba(0,0,0,0.08);
-      border-color: #0090D0; /* Highlight border on hover */
+      border-color: #0090D0; 
       transform: translateY(-5px);
     }
 
-    /* CARD HEADER (Title + Icon) */
+    /* CARD HEADER */
     .card-header {
       display: flex;
       justify-content: space-between;
@@ -87,7 +87,7 @@
       font-size: 16px;
       line-height: 1.6;
       color: #555;
-      margin: 0 0 30px 0;
+      margin: 0; /* Removed bottom margin */
     }
 
     .date-badge {
@@ -100,21 +100,7 @@
       margin-bottom: 15px;
     }
 
-    /* CARD FOOTER (Link) */
-    .card-footer a {
-      text-decoration: none;
-      color: #1A2B45;
-      font-weight: 700;
-      font-size: 14px;
-      border-bottom: 2px solid #1A2B45;
-      padding-bottom: 2px;
-      transition: all 0.2s;
-    }
-
-    .card-footer a:hover {
-      color: #0090D0;
-      border-color: #0090D0;
-    }
+    /* Removed .card-footer styles */
 
   </style>
 </head>
@@ -136,24 +122,18 @@
             Collaborated on technical workshops and peer-mentoring sessions for lower-batch students.
           </p>
         </div>
-        <div class="card-footer">
-          <a href="#">View Details</a>
-        </div>
       </div>
 
       <div class="exp-card">
         <div class="card-header">
-          <h2>IT Intern (Fictional)</h2>
+          <h2>P&G Intern (Fictional)</h2>
           <span class="card-icon">💼</span>
         </div>
         <div class="card-body">
           <span class="date-badge">June 2024 - Aug 2024</span>
           <p>
-            Assisted the network administrator at Tech Solutions Inc. in server maintenance, hardware troubleshooting, and workstation setup for new employees.
+            Assisted the network administrator at P&G in server maintenance, hardware troubleshooting, and workstation setup for new employees.
           </p>
-        </div>
-        <div class="card-footer">
-          <a href="#">View Details</a>
         </div>
       </div>
 
@@ -168,9 +148,6 @@
             Managed computer usage logs at the University Computer Lab. Ensured software was up to date and assisted students with basic C++ programming errors.
           </p>
         </div>
-        <div class="card-footer">
-          <a href="#">View Details</a>
-        </div>
       </div>
 
       <div class="exp-card">
@@ -183,9 +160,6 @@
           <p>
             Provided hardware repair and software installation services for local clients. Specialized in custom PC builds and home network configuration.
           </p>
-        </div>
-        <div class="card-footer">
-          <a href="#">View Details</a>
         </div>
       </div>
 

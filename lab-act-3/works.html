@@ -3,7 +3,6 @@
 <head>
   <title>Works</title>
   <style>
-    /* HYTALE THEME BASE */
     body { 
       font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; 
       margin: 0; 
@@ -15,7 +14,7 @@
       color: #333;
     }
 
-    /* CENTERED LAYOUT */
+
     .overlay {
       background-color: rgba(255, 255, 255, 0.94);
       min-height: 100vh;
@@ -37,16 +36,15 @@
       padding-bottom: 10px;
     }
 
-    /* 3-COLUMN GRID LAYOUT */
     .gallery-grid {
       display: grid;
-      grid-template-columns: repeat(3, 1fr); /* Exactly 3 per row */
+      grid-template-columns: repeat(3, 1fr);
       gap: 30px;
-      max-width: 1000px; /* Constrain width to keep cards looking good */
+      max-width: 1000px;
       width: 100%;
     }
 
-    /* CARD STYLING */
+  
     .card {
       position: relative;
       height: 450px; 
@@ -54,7 +52,7 @@
       overflow: hidden;
       cursor: pointer;
       box-shadow: 0 10px 20px rgba(0,0,0,0.15);
-      background-color: #0F1929; /* Dark background */
+      background-color: #0F1929; 
       transition: transform 0.3s ease, box-shadow 0.3s ease;
       border: 2px solid transparent;
     }
@@ -65,22 +63,22 @@
       border-color: #0090D0;
     }
 
-    /* BACKGROUND IMAGE */
+
     .card-bg {
       width: 100%;
       height: 100%;
       background-size: cover;
       background-position: center;
       transition: transform 0.5s ease;
-      opacity: 0.8; /* Dimmed slightly for text contrast */
+      opacity: 0.8; 
     }
 
     .card:hover .card-bg {
-      transform: scale(1.1); /* Zoom effect */
+      transform: scale(1.1);
       opacity: 1;
     }
 
-    /* VERTICAL TITLE */
+   
     .card-title {
       position: absolute;
       top: 25px;
@@ -104,13 +102,13 @@
       height: 100%;
     }
 
-    /* BOTTOM OVERLAY (Description Only) */
+
     .card-overlay {
       position: absolute;
       bottom: 0;
       left: 0;
       width: 100%;
-      height: 40%; /* Fixed height overlay */
+      height: 40%; 
       background: linear-gradient(to top, #1A2B45 10%, transparent);
       padding: 20px;
       box-sizing: border-box;
