@@ -3,7 +3,7 @@
 <head>
   <title>References</title>
   <style>
-    /* HYTALE THEME BASE */
+
     body { 
       font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; 
       margin: 0; 
@@ -36,16 +36,14 @@
       display: inline-block;
     }
 
-    /* 3-COLUMN GRID */
     .references-grid {
       display: grid;
-      grid-template-columns: repeat(3, 1fr); /* 3 Equal Columns */
+      grid-template-columns: repeat(3, 1fr);
       gap: 30px;
       max-width: 1100px;
       width: 100%;
     }
 
-    /* PROFILE CARD */
     .ref-card {
       background-color: #fff;
       border-radius: 12px;
@@ -56,17 +54,16 @@
       flex-direction: column;
       align-items: center;
       text-align: center;
-      border-top: 6px solid #1A2B45; /* Navy Top Accent */
+      border-top: 6px solid #1A2B45;
       padding: 40px 20px;
     }
 
     .ref-card:hover {
       transform: translateY(-10px);
       box-shadow: 0 20px 40px rgba(0, 144, 208, 0.25);
-      border-top-color: #0090D0; /* Change accent on hover */
+      border-top-color: #0090D0; 
     }
 
-    /* AVATAR CIRCLE */
     .avatar {
       width: 100px;
       height: 100px;
@@ -87,7 +84,6 @@
       color: #0090D0;
     }
 
-    /* TEXT CONTENT */
     h2 {
       margin: 0 0 5px 0;
       color: #1A2B45;
@@ -104,33 +100,12 @@
       margin-bottom: 5px;
       display: block;
     }
-
     .company {
       color: #777;
       font-size: 14px;
       font-style: italic;
-      margin-bottom: 30px;
+      margin-bottom: 0;
       display: block;
-    }
-
-    /* CONTACT BUTTON */
-    .contact-btn {
-      text-decoration: none;
-      padding: 12px 30px;
-      border: 2px solid #1A2B45;
-      color: #1A2B45;
-      border-radius: 30px;
-      font-weight: 700;
-      font-size: 13px;
-      text-transform: uppercase;
-      letter-spacing: 1px;
-      transition: all 0.3s;
-    }
-
-    .contact-btn:hover {
-      background-color: #1A2B45;
-      color: #fff;
-      box-shadow: 0 5px 15px rgba(26, 43, 69, 0.3);
     }
 
   </style>
@@ -143,26 +118,23 @@
 
       <div class="ref-card">
         <div class="avatar">🎓</div>
-        <h2>Dr. Jane Doe</h2>
+        <h2>Dr. Steven Strange</h2>
         <span class="position">Professor</span>
         <span class="company">De La Salle University - Manila</span>
-        <a href="mailto:jane.doe@example.com" class="contact-btn">Send Email</a>
       </div>
 
       <div class="ref-card">
         <div class="avatar">💼</div>
-        <h2>Mr. John Smith</h2>
+        <h2>Mr. Adam Levine</h2>
         <span class="position">Manager</span>
         <span class="company">Tech Solutions Inc.</span>
-        <a href="mailto:john.smith@example.com" class="contact-btn">Send Email</a>
       </div>
 
       <div class="ref-card">
         <div class="avatar">⚙️</div>
-        <h2>Engr. Michael Brown</h2>
+        <h2>Engr. Tony Stark</h2>
         <span class="position">Project Adviser</span>
         <span class="company">Department of Computer Eng.</span>
-        <a href="mailto:michael.brown@example.com" class="contact-btn">Send Email</a>
       </div>
 
     </div>

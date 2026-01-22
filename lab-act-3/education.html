@@ -3,7 +3,6 @@
 <head>
   <title>Education</title>
   <style>
-    /* BASE SETTINGS */
     body { 
       font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; 
       margin: 0; 
@@ -32,7 +31,6 @@
       display: inline-block;
     }
 
-    /* LIST CONTAINER */
     .education-list {
       width: 100%;
       max-width: 1200px; 
@@ -41,7 +39,6 @@
       border-top: 1px solid #eee;
     }
 
-    /* INDIVIDUAL SCHOOL ITEM */
     .school-item {
       position: relative;
       display: flex;
@@ -55,7 +52,6 @@
       cursor: pointer;
     }
 
-    /* HOVER BACKGROUND EFFECTS */
     .school-item::before {
       content: "";
       position: absolute;
@@ -78,7 +74,7 @@
       left: 0;
       width: 100%;
       height: 100%;
-      background: rgba(15, 25, 41, 0.9); /* Deep Hytale Navy Tint */
+      background: rgba(15, 25, 41, 0.9);
       opacity: 0;
       transition: opacity 0.4s ease;
       z-index: 2;
@@ -89,9 +85,7 @@
       opacity: 1;
     }
 
-    /* CONTENT LAYOUT */
-    
-    /* LEFT: ICON */
+
     .school-icon {
       position: relative;
       z-index: 3;
@@ -106,18 +100,16 @@
       flex-shrink: 0;
       background: #fff;
       font-size: 24px;
-      overflow: hidden; /* Ensures square images get clipped to circle */
+      overflow: hidden; 
     }
 
-    /* NEW RULE: Fixes Logo Sizing */
     .school-icon img {
       width: 100%;
       height: 100%;
-      object-fit: cover; /* Ensures image fills the circle */
+      object-fit: cover; 
       display: block;
     }
 
-    /* MIDDLE: TEXT INFO */
     .school-info {
       position: relative;
       z-index: 3;
@@ -150,7 +142,6 @@
       transition: color 0.3s;
     }
 
-    /* RIGHT: ACTION AREA */
     .school-action {
       position: relative;
       z-index: 3;
@@ -168,7 +159,7 @@
     }
 
     .visit-btn {
-      background-color: #0090D0; /* Hytale Blue */
+      background-color: #0090D0; 
       color: white;
       padding: 12px 30px;
       border-radius: 4px;
@@ -185,7 +176,6 @@
       transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
     }
 
-    /* HOVER STATE CHANGES */
     .school-item:hover .school-info h2,
     .school-item:hover .school-info p,
     .school-item:hover .school-info .highlight {
