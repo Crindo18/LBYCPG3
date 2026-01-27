@@ -1,0 +1,201 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&display=swap');
+
+:root {
+    --bg-dark: #1a1a1a;
+    --sidebar-bg: #242424;
+    --sidebar-inner: #1e1e1e;
+    --accent-color: #00d4ff;
+    --text-main: #e0e0e0;
+    --text-dim: #a0a0a0;
+    --border-style: 1px solid #333;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: var(--bg-dark);
+    font-family: 'Inter', sans-serif;
+    color: var(--text-main);
+    display: flex;
+    justify-content: center;
+    padding: 40px 20px;
+}
+
+.resume-container {
+    width: 900px;
+    display: flex;
+    background: var(--sidebar-bg);
+    border: var(--border-style);
+    box-shadow: 0 20px 50px rgba(0,0,0,0.5);
+    min-height: 1000px;
+}
+
+/* --- Sidebar Styling --- */
+.side-menu {
+    width: 300px;
+    background: var(--sidebar-inner);
+    border-right: var(--border-style);
+    padding: 40px 25px;
+}
+
+.profile-section {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.img-holder {
+    width: 120px;
+    height: 120px;
+    background: #333;
+    border-radius: 12px;
+    margin: 0 auto 15px;
+    border: 2px solid var(--accent-color);
+}
+.profile-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; 
+    border-radius: 10px; 
+}
+.side-menu h3 { font-size: 1.2rem; margin-bottom: 5px; }
+.side-menu p { font-size: 0.8rem; color: var(--accent-color); }
+
+.side-menu .resume_item { margin-top: 30px; }
+
+.side-menu .title {
+    font-size: 0.75rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    color: var(--accent-color);
+    margin-bottom: 15px;
+    border-bottom: 1px solid #333;
+    padding-bottom: 5px;
+}
+
+.info-link {
+    font-size: 0.85rem;
+    margin-bottom: 12px;
+    color: var(--text-dim);
+}
+.info-link i { margin-right: 10px; color: var(--accent-color); width: 15px; }
+
+/* Socials & Skills Sidebar */
+.side-menu ul { list-style: none; padding-left: 0; }
+
+.resume_social ul li {
+    display: flex;
+    align-items: center;
+    margin-bottom: 12px;
+    transition: transform 0.2s ease;
+}
+.resume_social ul li:hover { transform: translateX(5px); }
+
+.resume_social .icon {
+    width: 30px;
+    height: 30px;
+    background: #2a2a2a;
+    color: var(--accent-color);
+    border-radius: 4px;
+    text-align: center;
+    line-height: 30px;
+    font-size: 14px;
+    margin-right: 12px;
+}
+.resume_social .icon img {
+    width: 20px; 
+    height: 20px;
+    display: block;
+    margin: 5px auto; 
+}
+.resume_social .data p.semi-bold { font-size: 0.8rem; font-weight: 700; }
+.resume_social .data p:last-child { font-size: 0.7rem; color: var(--text-dim); }
+
+.skill_name { font-size: 0.85rem; margin-bottom: 5px; }
+.skill_progress {
+    width: 100%; height: 5px; background: #333;
+    position: relative; border-radius: 10px; margin-bottom: 15px;
+}
+.skill_progress span {
+    position: absolute; left: 0; height: 100%;
+    background: var(--accent-color); border-radius: 10px;
+}
+
+.skill-tag {
+    display: inline-block;
+    background: #1a1a1a;
+    color: var(--text-dim);
+    padding: 4px 10px;
+    border-radius: 4px;
+    font-size: 0.7rem;
+    margin: 3px;
+    border: 1px solid #333;
+    transition: all 0.3s;
+}
+.skill-tag:hover { border-color: var(--accent-color); color: var(--text-main); }
+
+/* --- Main Content Styling --- */
+.main-frame { flex: 1; padding: 50px; }
+
+.content-block { margin-bottom: 40px; }
+
+.section-title {
+    font-size: 1.1rem;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    color: var(--accent-color);
+    border-bottom: 2px solid var(--accent-color);
+    display: inline-block;
+    margin-bottom: 25px;
+}
+
+.exp-item {
+    margin-bottom: 30px;
+    padding-left: 20px;
+    border-left: 2px solid #333;
+    position: relative;
+    transition: border-color 0.3s ease;
+}
+.exp-item:hover { border-left-color: var(--accent-color); }
+
+.exp-item::before {
+    content: "";
+    position: absolute;
+    left: -7px; top: 0;
+    width: 12px; height: 12px;
+    background: var(--bg-dark);
+    border: 2px solid var(--accent-color);
+    border-radius: 50%;
+    margin-left: -1.4px;
+}
+
+.exp-header { display: flex; justify-content: space-between; margin-bottom: 5px; }
+.sub-text { color: var(--text-dim); font-size: 0.9rem; margin-bottom: 10px; }
+
+.role-bullets { list-style: none; padding-left: 0; }
+.role-bullets li {
+    position: relative; padding-left: 20px;
+    margin-bottom: 8px; color: var(--text-dim);
+    font-size: 0.9rem; line-height: 1.4;
+}
+.role-bullets li::before {
+    content: "▹"; position: absolute; left: 0;
+    color: var(--accent-color); font-weight: bold;
+}
+
+/* Education & Hobbies */
+.resume_education ul { list-style: none; padding-left: 0; }
+.resume_education li { display: flex; margin-bottom: 15px; border-left: none; padding-left: 0; }
+.resume_education .date { width: 110px; color: var(--accent-color); font-weight: 600; font-size: 0.9rem; }
+
+.hobby-list { display: flex; gap: 20px; margin-top: 10px; }
+.hobby-item {
+    text-align: center; background: #2a2a2a;
+    padding: 15px; border-radius: 8px; width: 100px;
+}
+.hobby-item i { font-size: 20px; color: var(--accent-color); margin-bottom: 8px; display: block; }
+.hobby-item p { font-size: 0.7rem; }
