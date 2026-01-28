@@ -1,0 +1,390 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Education</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body class="education-page">
+  <div class="education-overlay">
+    <h1>Academic Background</h1>
+    
+    <div class="education-list">
+
+      <a href="https://www.dlsu.edu.ph" target="_blank" class="school-item">
+        <div class="school-icon">
+          <img src="assets/dlsu.jpg" alt="De La Salle University Logo">
+        </div>
+        <div class="school-info">
+          <h2>De La Salle University - Manila</h2>
+          <p>
+            Currently pursuing a Bachelor of Science in Computer Engineering. 
+            Focusing on Embedded Systems, FPGA Design, and Network Infrastructure. 
+            Active member of the ACCESS student organization.
+          </p>
+          <span class="highlight">Year: 2023 - Present</span>
+        </div>
+        <div class="school-action">
+          <span class="arrow">&rsaquo;</span>
+          <span class="visit-btn">Visit Page</span>
+        </div>
+      </a>
+
+      <a href="https://adi.edu.ph/adinew/" target="_blank" class="school-item">
+        <div class="school-icon">
+          <img src="assets/adi.png" alt="Ateneo de Iloilo Logo">
+        </div>
+        <div class="school-info">
+          <h2>Ateneo de Iloilo</h2>
+          <p>
+            Graduated with High Honors under the Science, Technology, Engineering, and Mathematics (STEM) strand.
+            Completed capstone research focused on basic robotics and physics.
+          </p>
+          <span class="highlight">Year: 2021 - 2023</span>
+        </div>
+        <div class="school-action">
+          <span class="arrow">&rsaquo;</span>
+          <span class="visit-btn">Visit Page</span>
+        </div>
+      </a>
+
+      <a href="https://www.facebook.com/CapizNHS.net/" target="_blank" class="school-item">
+        <div class="school-icon">
+           <img src="assets/ste.jpg" alt="Capiz National High School - STE Logo">
+        </div>
+        <div class="school-info">
+          <h2>Capiz National High School - STE</h2>
+          <p>
+            Completed secondary education with a strong foundation in mathematics and basic sciences.
+            Participated in various inter-school quiz bees and math competitions.
+          </p>
+          <span class="highlight">Year: 2017 - 2021</span>
+        </div>
+        <div class="school-action">
+          <span class="arrow">&rsaquo;</span>
+          <span class="visit-btn">Visit Page</span>
+        </div>
+      </a>
+
+      <a href="https://www.facebook.com/CapizCommercialSchool/" target="_blank" class="school-item">
+        <div class="school-icon">
+          <img src="assets/ccs.jpg" alt="Capiz Commercial School Logo">
+        </div>
+        <div class="school-info">
+          <h2>Capiz Commercial School</h2>
+          <p>
+            Primary education completed. Awarded consistent academic honors and active participation in extra-curricular clubs.
+          </p>
+          <span class="highlight">Year: 2011 - 2017</span>
+        </div>
+        <div class="school-action">
+          <span class="arrow">&rsaquo;</span>
+          <span class="visit-btn">Visit Page</span>
+        </div>
+      </a>
+
+      <a href="https://www.facebook.com/KeziahChristianSchool/" target="_blank" class="school-item">
+        <div class="school-icon">
+          <img src="assets/keziah.jpg" alt="Keziah Christian School Logo">
+        </div>
+        <div class="school-info">
+          <h2>Keziah Christian School</h2>
+          <p>
+            Early childhood education.
+          </p>
+          <span class="highlight">Year: 2009 - 2011</span>
+        </div>
+        <div class="school-action">
+          <span class="arrow">&rsaquo;</span>
+          <span class="visit-btn">Visit Page</span>
+        </div>
+      </a>
+
+    </div>
+  </div>
+</body>
+</html>
+
+    .overlay {
+      background-color: #fff;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding: 60px 0; 
+    }
+
+    h1 { 
+      color: #1A2B45; 
+      font-size: 42px;
+      text-transform: uppercase; 
+      letter-spacing: 2px;
+      margin-bottom: 60px;
+      border-bottom: 5px solid #0090D0;
+      padding-bottom: 10px;
+      display: inline-block;
+    }
+
+    .education-list {
+      width: 100%;
+      max-width: 1200px; 
+      display: flex;
+      flex-direction: column;
+      border-top: 1px solid #eee;
+    }
+
+    .school-item {
+      position: relative;
+      display: flex;
+      align-items: flex-start; 
+      padding: 50px 40px;
+      background-color: #fff;
+      border-bottom: 1px solid #eee;
+      text-decoration: none; 
+      transition: all 0.3s ease;
+      overflow: hidden; 
+      cursor: pointer;
+    }
+
+    .school-item::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-image: url('assets/background.jpg'); 
+      background-size: cover;
+      background-position: center;
+      opacity: 0; 
+      transition: opacity 0.4s ease;
+      z-index: 1;
+    }
+
+    .school-item::after {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(15, 25, 41, 0.9);
+      opacity: 0;
+      transition: opacity 0.4s ease;
+      z-index: 2;
+    }
+
+    .school-item:hover::before,
+    .school-item:hover::after {
+      opacity: 1;
+    }
+
+
+    .school-icon {
+      position: relative;
+      z-index: 3;
+      width: 60px;
+      height: 60px;
+      border-radius: 50%;
+      border: 2px solid #ddd;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-right: 35px;
+      flex-shrink: 0;
+      background: #fff;
+      font-size: 24px;
+      overflow: hidden; 
+    }
+
+    .school-icon img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover; 
+      display: block;
+    }
+
+    .school-info {
+      position: relative;
+      z-index: 3;
+      flex-grow: 1;
+      padding-right: 20px;
+    }
+
+    .school-info h2 {
+      font-size: 26px;
+      font-weight: 700;
+      color: #1A2B45;
+      margin: 0 0 15px 0;
+      transition: color 0.3s;
+    }
+
+    .school-info p {
+      font-size: 15px;
+      line-height: 1.6;
+      color: #666;
+      margin: 0 0 15px 0;
+      max-width: 800px;
+      transition: color 0.3s;
+    }
+
+    .school-info .highlight {
+      font-weight: 700;
+      color: #333;
+      font-size: 14px;
+      display: block; 
+      transition: color 0.3s;
+    }
+
+    .school-action {
+      position: relative;
+      z-index: 3;
+      width: 150px;
+      display: flex;
+      justify-content: flex-end;
+      align-items: center;
+      height: 60px; 
+    }
+
+    .arrow {
+      font-size: 30px;
+      color: #ccc;
+      transition: opacity 0.3s, transform 0.3s;
+    }
+
+    .visit-btn {
+      background-color: #0090D0; 
+      color: white;
+      padding: 12px 30px;
+      border-radius: 4px;
+      font-weight: 700;
+      text-transform: uppercase;
+      font-size: 14px;
+      letter-spacing: 1px;
+      text-align: center;
+      opacity: 0;
+      transform: translateX(20px);
+      position: absolute;
+      right: 0;
+      white-space: nowrap;
+      transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    }
+
+    .school-item:hover .school-info h2,
+    .school-item:hover .school-info p,
+    .school-item:hover .school-info .highlight {
+      color: #fff;
+    }
+
+    .school-item:hover .arrow {
+      opacity: 0;
+      transform: translateX(-10px);
+    }
+
+    .school-item:hover .visit-btn {
+      opacity: 1;
+      transform: translateX(0);
+    }
+
+  </style>
+</head>
+<body>
+  <div class="overlay">
+    <h1>Academic Background</h1>
+    
+    <div class="education-list">
+
+      <a href="https://www.dlsu.edu.ph" target="_blank" class="school-item">
+        <div class="school-icon">
+          <img src="assets/dlsu.jpg" alt="De La Salle University Logo">
+        </div>
+        <div class="school-info">
+          <h2>De La Salle University - Manila</h2>
+          <p>
+            Currently pursuing a Bachelor of Science in Computer Engineering. 
+            Focusing on Embedded Systems, FPGA Design, and Network Infrastructure. 
+            Active member of the ACCESS student organization.
+          </p>
+          <span class="highlight">Year: 2023 - Present</span>
+        </div>
+        <div class="school-action">
+          <span class="arrow">&rsaquo;</span>
+          <span class="visit-btn">Visit Page</span>
+        </div>
+      </a>
+
+      <a href="https://adi.edu.ph/adinew/" target="_blank" class="school-item">
+        <div class="school-icon">
+          <img src="assets/adi.png" alt="Ateneo de Iloilo Logo">
+        </div>
+        <div class="school-info">
+          <h2>Ateneo de Iloilo</h2>
+          <p>
+            Graduated with High Honors under the Science, Technology, Engineering, and Mathematics (STEM) strand.
+            Completed capstone research focused on basic robotics and physics.
+          </p>
+          <span class="highlight">Year: 2021 - 2023</span>
+        </div>
+        <div class="school-action">
+          <span class="arrow">&rsaquo;</span>
+          <span class="visit-btn">Visit Page</span>
+        </div>
+      </a>
+
+      <a href="https://www.facebook.com/CapizNHS.net/" target="_blank" class="school-item">
+        <div class="school-icon">
+           <img src="assets/ste.jpg" alt="Capiz National High School - STE Logo">
+        </div>
+        <div class="school-info">
+          <h2>Capiz National High School - STE</h2>
+          <p>
+            Completed secondary education with a strong foundation in mathematics and basic sciences.
+            Participated in various inter-school quiz bees and math competitions.
+          </p>
+          <span class="highlight">Year: 2017 - 2021</span>
+        </div>
+        <div class="school-action">
+          <span class="arrow">&rsaquo;</span>
+          <span class="visit-btn">Visit Page</span>
+        </div>
+      </a>
+
+      <a href="https://www.facebook.com/CapizCommercialSchool/" target="_blank" class="school-item">
+        <div class="school-icon">
+          <img src="assets/ccs.jpg" alt="Capiz Commercial School Logo">
+        </div>
+        <div class="school-info">
+          <h2>Capiz Commercial School</h2>
+          <p>
+            Primary education completed. Awarded consistent academic honors and active participation in extra-curricular clubs.
+          </p>
+          <span class="highlight">Year: 2011 - 2017</span>
+        </div>
+        <div class="school-action">
+          <span class="arrow">&rsaquo;</span>
+          <span class="visit-btn">Visit Page</span>
+        </div>
+      </a>
+
+      <a href="https://www.facebook.com/KeziahChristianSchool/" target="_blank" class="school-item">
+        <div class="school-icon">
+          <img src="assets/keziah.jpg" alt="Keziah Christian School Logo">
+        </div>
+        <div class="school-info">
+          <h2>Keziah Christian School</h2>
+          <p>
+            Early childhood education.
+          </p>
+          <span class="highlight">Year: 2009 - 2011</span>
+        </div>
+        <div class="school-action">
+          <span class="arrow">&rsaquo;</span>
+          <span class="visit-btn">Visit Page</span>
+        </div>
+      </a>
+
+    </div>
+  </div>
+</body>
+</html>
