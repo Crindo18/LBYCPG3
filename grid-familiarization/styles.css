@@ -1,0 +1,77 @@
+/* Universal selector - applies to ALL elements on the page */
+* {
+margin: 0;
+/* Removes default margin from all elements */
+padding: 0;
+/* Removes default padding from all elements */
+box-sizing: border-box;
+/* Makes width/height include padding and border */
+}
+/* Styles for the body element (the main container of the page) */
+body {
+font-family: Arial, sans-serif;
+/* Sets the font for all text */
+padding: 20px;
+/* Adds 20px space inside the body on all sides */
+background-color: #f0f0f0;
+/* Light gray background color */
+}
+/* Styles for the gallery container - this is our grid container */
+.gallery {
+display: grid;
+/* Turns this element into a CSS Grid container */
+grid-template-columns: repeat(3, 1fr);
+/* Creates 3 equal-width columns */
+grid-template-rows: repeat(2, 200px);
+/* Creates 2 rows, each 200px tall */
+gap: 15px;
+/* Adds 15px spacing between grid items */
+max-width: 1000px;
+/* Limits the gallery width to 1000px maximum */
+margin: 0 auto;
+/* Centers the gallery horizontally on the page */
+}
+/* Base styles for all gallery items */
+.item {
+background-color: #4CAF50;
+/* Green background (default, will be overridden) */
+color: white;
+/* White text color */
+display: flex;
+/* Uses flexbox for centering content inside */
+justify-content: center;
+/* Centers content horizontally */
+align-items: center;
+/* Centers content vertically */
+font-size: 24px;
+/* Sets text size to 24 pixels */
+font-weight: bold;
+/* Makes the text bold */
+border-radius: 8px;
+/* Rounds the corners by 8px */
+}
+/* Individual color overrides for each gallery item */
+.item1 {
+background-color: #FF6B6B;
+/* Red/coral color for first item */
+}
+.item2 {
+background-color: #4ECDC4;
+/* Turquoise color for second item */
+}
+.item3 {
+background-color: #45B7D1;
+/* Blue color for third item */
+}
+.item4 {
+background-color: #FFA07A;
+/* Light salmon color for fourth item */
+}
+.item5 {
+background-color: #98D8C8;
+/* Mint green color for fifth item */
+}
+.item6 {
+background-color: #F7DC6F;
+/* Yellow color for sixth item */
+}

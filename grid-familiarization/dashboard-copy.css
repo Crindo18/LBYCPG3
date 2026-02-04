@@ -1,0 +1,64 @@
+* {
+margin: 0;
+padding: 0;
+box-sizing: border-box;
+}
+body {
+font-family: Arial, sans-serif;
+height: 100vh;
+}
+.dashboard {
+display: grid;
+height: 100vh;
+grid-template-columns: 200px 1fr 200px;
+/* Add your grid-template-columns here */
+grid-template-rows: 80px 1fr 60px;
+/* Add your grid-template-rows here */
+gap: 10px;
+/* Add gap here */
+grid-template-areas: 
+    "header header header"
+    "sidebar main   widget1"
+    "sidebar widget2 ." 
+    "footer footer footer";
+
+}
+.header {
+background-color: #2C3E50;
+color: white;
+display: flex;
+align-items: center;
+padding: 0 20px;
+grid-area: header;
+}
+.sidebar {
+background-color: #34495E;
+color: white;
+padding: 20px;
+grid-area: sidebar;
+}
+.main {
+background-color: #ECF0F1;
+padding: 20px;
+grid-area: main;
+}
+.widget1 {
+background-color: #3498DB;
+color: white;
+padding: 20px;
+grid-area: widget1;
+}
+.widget2 {
+background-color: #9B59B6;
+color: white;
+padding: 20px;
+grid-area: widget2;
+}
+.footer {
+background-color: #2C3E50;
+color: white;
+display: flex;
+align-items: center;
+padding: 0 20px;
+grid-area: footer;
+}
