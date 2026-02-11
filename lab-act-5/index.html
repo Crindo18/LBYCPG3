@@ -1,11 +1,113 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Document</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lab 5: JavaScript Simulations</title>
+    <style>
+        body { font-family: sans-serif; padding: 20px; max-width: 800px; margin: 0 auto; }
+        .exercise { border: 1px solid #ccc; padding: 15px; margin-bottom: 20px; border-radius: 8px; }
+        .output { background-color: #f0f0f0; padding: 10px; border-left: 4px solid #007bff; margin-top: 10px; min-height: 20px; }
+        h2 { margin-top: 0; color: #333; }
+        button, input[type="button"] { padding: 5px 10px; cursor: pointer; }
+    </style>
 </head>
 <body>
-  <script src="ex2.js"></script>
+
+    <h1>Laboratory Activity 5: JavaScript Simulations</h1>
+
+    <div class="exercise">
+        <h2>1. Sum of Array</h2>
+        <p>Computes sum of 6 integers and prints the result.</p>
+        <button onclick="computeSum()">Run</button>
+        <div id="out1" class="output">Output = </div>
+    </div>
+
+    <div class="exercise">
+        <h2>2. Leap Year Check</h2>
+        <p>Checks if a year is a leap year.</p>
+        <input type="number" id="yearInput" placeholder="Enter Year">
+        <button onclick="initLeapYear()">Check Year</button>
+    </div>
+
+    <div class="exercise">
+        <h2>3. Odd or Even</h2>
+        <p>Iterates 0-15 and prints if they are odd or even.</p>
+        <button onclick="oddEvenLoop()">Execute Loop</button>
+        <div id="out3" class="output">Output = </div>
+    </div>
+
+    <div class="exercise">
+        <h2>4. Multiply and Divide</h2>
+        <p><em>Requirement: Use form element.</em></p>
+        <form id="calcForm">
+            num1: <input type="number" name="num1"><br><br>
+            num2: <input type="number" name="num2"><br><br>
+            <input type="button" value="Multiply" onclick="multiplyBy()">
+            <input type="button" value="Divide" onclick="divideBy()">
+        </form>
+        <div id="out4" class="output">Output = </div>
+    </div>
+
+    <div class="exercise">
+        <h2>5. Temperature Converter</h2>
+        <p><em>Requirement: Use form element.</em></p>
+        <form id="tempForm">
+            Celsius: <input type="number" name="celsius"> 
+            <input type="button" value="Convert to Fahrenheit" onclick="CentoFar()"><br><br>
+            Fahrenheit: <input type="number" name="fahrenheit"> 
+            <input type="button" value="Convert to Celsius" onclick="FartoCen()">
+        </form>
+        <div id="out5" class="output">Output = </div>
+    </div>
+
+    <div class="exercise">
+        <h2>6. Reverse Number</h2>
+        <input type="number" id="revInput" placeholder="Enter Number">
+        <button onclick="rev_num()">Reverse</button>
+        <div id="out6" class="output">Output = </div>
+    </div>
+
+    <div class="exercise">
+        <h2>7. Palindrome Check</h2>
+        <input type="text" id="palInput" placeholder="Enter String">
+        <button onclick="myFunction()">Check Palindrome</button>
+        <div id="out7" class="output">Output = </div>
+    </div>
+
+    <div class="exercise">
+        <h2>8. Uppercase Check</h2>
+        <input type="text" id="upperInput" placeholder="Enter String">
+        <button onclick="runUpperCase()">Check</button>
+        <div id="out8" class="output">Output = </div>
+    </div>
+
+    <div class="exercise">
+        <h2>9. Background Color</h2>
+        <p id="targetPara" style="border: 1px dashed #999; padding: 5px;">
+            This is the paragraph text whose background will change.
+        </p>
+        <button onclick="set_background()">Change Background</button>
+    </div>
+
+    <div class="exercise">
+        <h2>10. Mobile Validation</h2>
+        <form name="mobileForm">
+            Mobile No: <input type="text" name="mobile">
+            <input type="button" value="Check" onclick="MobileNoValidation()">
+        </form>
+        <div id="out10" class="output">Output = </div>
+    </div>
+
+    <script src="ex1.js"></script>
+    <script src="ex2.js"></script>
+    <script src="ex3.js"></script>
+    <script src="ex4.js"></script>
+    <script src="ex5.js"></script>
+    <script src="ex6.js"></script>
+    <script src="ex7.js"></script>
+    <script src="ex8.js"></script>
+    <script src="ex9.js"></script>
+    <script src="ex10.js"></script>
 </body>
 </html>
