@@ -1,0 +1,77 @@
+/* Style for the container that holds everything */
+.container {
+    text-align: center;
+    margin-top: 50px;
+    font-family: Arial, sans-serif;
+}
+
+/* Wrapper for the button to position floating numbers */
+.button-wrapper {
+    position: relative;
+    display: inline-block;
+}
+
+/* Style for the button in its normal state */
+.my-button {
+    background-color: #5000fd;
+    color: white;
+    padding: 15px 30px;
+    font-size: 16px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    position: relative;
+}
+
+/* Style for the button when it's hovered over */
+.my-button:hover {
+    background-color: #7b3ffd;
+}
+
+/* Style for when the button has the "active" class */
+.my-button.active {
+    background-color: #ccf929;
+    transform: scale(0.95);
+}
+
+/* Style for the text box */
+.message-box {
+    margin-top: 20px;
+    padding: 20px;
+    background-color: #f0f0f0;
+    border-radius: 5px;
+    display: none;
+    /* Hidden by default */
+}
+
+/* Style for when the message box is visible */
+.message-box.show {
+    display: block;
+}
+
+/* Floating +1 animation styles */
+.floating-number {
+    position: absolute;
+    font-size: 24px;
+    font-weight: bold;
+    color: #5000fd;
+    pointer-events: none;
+    animation: floatUp 1s ease-out forwards;
+    z-index: 1000;
+}
+
+/* Keyframe animation for the floating effect */
+@keyframes floatUp {
+    0% {
+        opacity: 1;
+        transform: translateY(0) scale(1);
+    }
+    50% {
+        opacity: 0.8;
+        transform: translateY(-30px) scale(1.2);
+    }
+    100% {
+        opacity: 0;
+        transform: translateY(-60px) scale(0.8);
+    }
+}
